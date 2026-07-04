@@ -1,0 +1,162 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Style */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.2); /* Efek transparan tipis sesuai gambar */
+    z-index: 10;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #ffb703;
+}
+
+/* Hero Section with Background */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1600') no-repeat center center/cover; /* Placeholder gambar sekolah resolusi tinggi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Layer gelap agar teks terbaca tajam */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Rounded Search Bar */
+.search-container {
+    display: flex;
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-container button {
+    background: #ffb703; /* Kuning mirip gambar asli */
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+    background: #e5a100;
+}
+
+/* Result Box Style */
+.result-box {
+    margin-top: 20px;
+    background: rgba(25, 42, 62, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer Copyright */
+footer {
+    background: #1a2e40;
+    color: #a0aec0;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* Responsivitas Layar HP */
+@media (max-width: 768px) {
+    .nav-menu { display: none; } /* Menyembunyikan menu pada layar kecil demi estetika mobile */
+    .hero-content h1 { font-size: 28px; }
+    .search-container { border-radius: 20px; flex-direction: column; gap: 10px; background: transparent; box-shadow: none;}
+    .search-container input { background: #fff; border-radius: 50px; }
+    .search-container button { padding: 12px; border-radius: 50px; }
+}
+

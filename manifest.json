@@ -1,0 +1,22 @@
+{
+  "short_name": "TeladanApp",
+  "name": "SMA Negeri 1 Yogyakarta Portal",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://via.placeholder.com/512",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#1a2e40",
+  "theme-color": "#1a2e40",
+  "display": "standalone",
+  "orientation": "portrait"
+}
+
